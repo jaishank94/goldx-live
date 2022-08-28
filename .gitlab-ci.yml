@@ -1,0 +1,49 @@
+services:
+  - docker:18-dind
+
+variables:
+  REPOSITORY_URL: 873931742302.dkr.ecr.us-east-1.amazonaws.com
+
+stages:
+  - deploy
+
+deploy_prod:
+  stage: deploy
+  image: docker:latest
+
+  when: manual
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+  variables:
+    REPOSITORY_IMAGE: prod-pulsechain-app
+    API_TASK_DEFINITION: aws/prod-app-task-definition.json
+    ECS_CLUSTER: pulsechain-cluster
+    ECS_SERVICE: prod-pulsechain-app-service
+    ECS_TASK_DEFINITION_FAMILY: prod-pulsechain-app
+    DOCKER_TLS_CERTDIR: ""
+
+  before_script:
+    - apk add --no-cache --update curl jq py-pip
+    - pip install awscli
+
+  script:
+    # Login to AWS ECR
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPOSITORY_URL
+
+    # Build docker image
+    - docker build -t $REPOSITORY_URL/$REPOSITORY_IMAGE:$CI_COMMIT_SHORT_SHA .
+    - docker push $REPOSITORY_URL/$REPOSITORY_IMAGE:$CI_COMMIT_SHORT_SHA
+
+    # Configure task definition - API
+    - sed -i -e "s/REPOSITORY_URL/$REPOSITORY_URL/g" $API_TASK_DEFINITION
+    - sed -i -e "s/REPOSITORY_IMAGE/$REPOSITORY_IMAGE/g" $API_TASK_DEFINITION
+    - sed -i -e "s/REPOSITORY_TAG/$CI_COMMIT_SHORT_SHA/g" $API_TASK_DEFINITION
+
+    # Update tasks and services - API
+    - API_REV=$(aws ecs register-task-definition --family $ECS_TASK_DEFINITION_FAMILY --region $AWS_DEFAULT_REGION --cli-input-json file://$API_TASK_DEFINITION | jq --raw-output '.taskDefinition.revision')
+    - aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --task-definition $REPOSITORY_IMAGE:${API_REV} --region $AWS_DEFAULT_REGION
+    - docker rmi $REPOSITORY_URL/$REPOSITORY_IMAGE:$CI_COMMIT_SHORT_SHA
+    - docker image prune --force --filter label=stage=builder
+    - aws ecs wait services-stable --cluster $ECS_CLUSTER --service $ECS_SERVICE
+    - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'

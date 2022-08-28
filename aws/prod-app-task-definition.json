@@ -1,0 +1,32 @@
+{
+  "family": "prod-pulsechain-app",
+  "executionRoleArn": "arn:aws:iam::873931742302:role/ecsTaskExecutionRoleProduction",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "prod-pulsechain-app",
+      "image": "REPOSITORY_URL/REPOSITORY_IMAGE:REPOSITORY_TAG",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/prod/pulsechain-cluster/pulsechain-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048"
+}
