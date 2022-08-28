@@ -64,7 +64,7 @@ export default function index() {
   const [filter, setFilter] = useState(Filter[0]);
   const [category, setCategory] = useState(Category[0]);
   const [isLoading, setLoading] = useState(false);
-  const { theme, setTheme } = useTheme("dark");
+  const { theme, setTheme } = useTheme("light");
   const [isMounted, setMounted] = useState(false);
   const { query } = useRouter();
   const { filter_category } = query;
@@ -244,7 +244,7 @@ export default function index() {
       <div className="wrapper custom-wrapper overflow-hidden bg-[#EDF1F4] dark:bg-neutral-900">
         <div className="md:container mx-2 md:mx-auto">
           <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
-            <div className="relative lg:col-span-3 p-4 rounded-2xl bg-[url('../public/images/homePgGoldBarWCoins.png')] bg-cover object-fill pt-60">
+            <div className="relative lg:col-span-3 p-4 rounded-2xl bg-[url('../public/images/homePgGoldBarWCoins.png')] bg-cover object-fill pt-72">
               <div className="rounded-xl bg-black bg-opacity-75 backdrop-blur-md border border-slate-800 p-4">
                 <div className="flex justify-between items-center text-xs border-b border-slate-800 pb-3 mb-3">
                   <label className="flex items-center text-white"><span>Real time capital.com</span> <BiChevronDown /></label>

@@ -24,7 +24,7 @@ export default function Header({ displayCreate }) {
   const { authenticate, isAuthenticated, user, isInitialized, logout } =
     useMoralis();
 
-  const { theme, setTheme } = useTheme("dark");
+  const { theme, setTheme } = useTheme("light");
   const [isMounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,18 +45,19 @@ export default function Header({ displayCreate }) {
 
   return (
     <>
-      <header className="sticky top-0 left-0 right-0 z-[110] border-b border-gray-200 bg-opacity-30 py-4 backdrop-blur-lg backdrop-filter dark:border-gray-700">
+      <header className="sticky top-0 left-0 right-0 z-[110] border-b border-gray-200 dark:bg-black bg-opacity-30 py-4 backdrop-blur-lg backdrop-filter dark:border-gray-700 light:bg-gradient-to-r from-gray-600 to-slate-300">
         <Head>
           <title>gold.live</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
           <link href="http://fonts.cdnfonts.com/css/samsung-sharp-sans" rel="stylesheet" />
           <link href="https://fonts.cdnfonts.com/css/gordita" rel="stylesheet" />
 
         </Head>
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 xl:max-w-7xl xl:px-0">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 xl:max-w-7xl xl:px-0 ">
           <Link className="" href="/">
             <div className="flex items-center cursor-pointer">
-              <p className="font-bold md:text-3xl text-xl ml-1 font-logo-font">
+              <Image src="/images/gold-live-logo.png" width={50} height={50} className="stroke-slate-500"/>
+              <p className="font-bold md:text-3xl text-xl ml-1 font-logo-font outline-4 text-stroke hidden lg:block">
                 <span className="text-gold-200">gold.</span>
                 <span className="text-gold-100/60">live</span>
               </p>
@@ -70,7 +71,7 @@ export default function Header({ displayCreate }) {
               ['Blogs', '/blogs'],
               ['Advertise', '/advertise'],
             ].map(([title, url]) => (
-              <a href={url} className="px-3 py-2 text-white-700 sm:text-xs md:text-sm uppercase">{title}</a>
+              <a href={url} className="px-3 py-2 sm:text-xs md:text-sm uppercase">{title}</a>
             ))}
           </nav>
           <div className="flex items-center space-x-5">
