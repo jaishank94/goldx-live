@@ -49,14 +49,14 @@ export default function Header({ displayCreate }) {
         <Head>
           <title>gold.live</title>
           <link rel="icon" href="/favicon.png" />
-          <link href="http://fonts.cdnfonts.com/css/samsung-sharp-sans" rel="stylesheet" />
+          <link href="https://fonts.cdnfonts.com/css/samsung-sharp-sans" rel="stylesheet" />
           <link href="https://fonts.cdnfonts.com/css/gordita" rel="stylesheet" />
 
         </Head>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 xl:max-w-7xl xl:px-0 ">
           <Link className="" href="/">
             <div className="flex items-center cursor-pointer">
-              <Image src="/images/gold-live-logo.png" width={50} height={50} className="stroke-slate-500"/>
+              <img src="/images/gold-live-logo.png" width={50} height={50} className="stroke-slate-500"/>
               <p className="font-bold md:text-3xl text-xl ml-1 font-logo-font outline-4 text-stroke hidden lg:block">
                 <span className="text-gold-200">gold.</span>
                 <span className="text-gold-100/60">live</span>
