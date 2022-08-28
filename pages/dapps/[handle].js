@@ -49,7 +49,7 @@ import { RWebShare } from "react-web-share";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { BiCertification } from "react-icons/bi";
-import ShareModal from "../components/ShareModal";
+// import ShareModal from "../components/ShareModal";
 
 const Categories = [
   {
@@ -791,7 +791,7 @@ export default function DappDetails() {
                           <BsShare className="h-5 w-5" color="blueviolet" />
                         </span>
                       </button>
-                      {sharePopup && (
+                      {/* {sharePopup && (
                         <ShareModal
                           title={dappInfo.name}
                           closeModal={() => setSharePopup(!sharePopup)}
@@ -807,7 +807,7 @@ export default function DappDetails() {
                           ]}
                           logo={dappInfo.logo}
                         />
-                      )}
+                      )} */}
                       <Link href={"/dappAbusive?url=" + window.location.href}>
                         <div
                           className={`flex items-center rounded-lg px-4 h-12 mx-2 md:rounded-full border-0
