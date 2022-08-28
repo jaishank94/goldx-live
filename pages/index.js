@@ -311,8 +311,8 @@ export default function index() {
                 </div>
               </div>
             </div>
-            <div className="relative lg:col-span-2 p-4 bg-cyan-300"></div>
-            <div className="p-4 bg-slate-400"></div>
+            {/* <div className="relative lg:col-span-2 p-4 bg-cyan-300"></div>
+            <div className="p-4 bg-slate-400"></div> */}
           </div>
         </div>
       </div>
