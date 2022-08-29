@@ -28,7 +28,7 @@ const Footer = () => {
               <p className="text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
               <button className="rounded-full cursor-pointer border mx-auto mt-6 p-2 text-xl bg-black shadow-lg shadow-inner shadow-gold-400">
                 <span className="p-2 text-sm text-transparent uppercase font-bold bg-clip-text bg-gradient-to-r from-gold-300 to-gold-100">
-                  Learn More
+                  More about fuse gold
                 </span>
               </button>
             </div>
