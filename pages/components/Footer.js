@@ -1,9 +1,11 @@
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { Fragment, useEffect, useState } from "react";
+import Image from "next/image";
 import { BsTwitter, BsGithub } from "react-icons/bs";
+import GoldBarsImg from "../../public/images/gold-bars.png"
 
-export default function Footer() {
+const Footer = () => {
   const router = useRouter();
   const { theme, setTheme } = useTheme("dark");
   const [isMounted, setMounted] = useState(false);
@@ -16,8 +18,25 @@ export default function Footer() {
   return (
     <Fragment>
       <footer
-        className='text-center relative bottom-0 w-full'
-      >
+        className='text-center relative bottom-0 w-full pt-48 mt-48 bg-white dark:bg-neutral-800'>
+        <div className=" max-w-7xl absolute -top-36 left-0 right-0 rounded-3xl md:mx-auto bg-[url('/images/footer-image.jpg')] bg-cover object-fill p-10">
+          <div className="flex justify-between">
+            <div className="md:w-1/2 text-left">
+              <p className="text-3xl md:text-6xl text-white font-bold">
+                Fuse Gold
+              </p>
+              <p className="text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+              <button className="rounded-full cursor-pointer border mx-auto mt-6 p-2 text-xl bg-black shadow-lg shadow-inner shadow-gold-400">
+                <span className="p-2 text-sm text-transparent uppercase font-bold bg-clip-text bg-gradient-to-r from-gold-300 to-gold-100">
+                  Learn More
+                </span>
+              </button>
+            </div>
+            <div className="hidden md:block absolute right-0 -top-6">
+              <img src="/images/gold-bars.png" className="w-1/4 md:w-10/12" />
+            </div>
+          </div>
+        </div>
         <div className="bg-white dark:bg-neutral-800">
           <div className="my-6">
             <p className="font-bold md:text-3xl text-xl ml-1 font-logo-font outline-4 hidden lg:block">
@@ -25,7 +44,7 @@ export default function Footer() {
               <span className="text-gold-100/60">live</span>
             </p>
           </div>
-          <ul className="flex justify-center p-2 w-full flex-wrap cursor-pointer items-center mt-3 text-xs font-medium text-gray-500 dark:text-gray-400 sm:mt-0 uppercase mb-10 border-none">
+          <ul className="flex justify-center p-2 w-full flex-wrap cursor-pointer items-center mt-3 text-xs font-medium text-gray-500 dark:text-gray-400 sm:mt-0 uppercase border-none">
             {[
               ['Valuation', '/valuation'],
               ['Strategic Asset', '/strategic-asset'],
@@ -50,3 +69,5 @@ export default function Footer() {
     </Fragment>
   );
 }
+
+export default Footer
