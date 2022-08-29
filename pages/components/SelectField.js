@@ -6,9 +6,14 @@ import { BiChevronDown, BiCheck } from 'react-icons/bi'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+const dummyOpt =
+{
+  name: "Please Select",
+  value: ""
+}
 
 const SelectField = ({ options }) => {
-  const [selected, setSelected] = useState(options[0])
+  const [selected, setSelected] = useState(options ? options[0] : dummyOpt)
 
   return (
     <Listbox value={selected} onChange={setSelected}>
@@ -34,7 +39,7 @@ const SelectField = ({ options }) => {
               leaveTo="opacity-0"
             >
               <Listbox.Options className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
-                {options.map((option, key) => (
+                {options && options.map((option, key) => (
                   <Listbox.Option
                     key={key + 1}
                     className={({ active }) =>
