@@ -57,6 +57,7 @@ const index = () => {
 
   useEffect(() => {
     setMounted(true);
+    setTheme('light')
   }, []);
 
   const handleSidebar = () => {
