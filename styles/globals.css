@@ -196,6 +196,13 @@ input:checked~.dot {
   background-color: #48bb78;
 }
 
+.icon-list {
+  list-style-image: url('/images/bullet-point.png');
+  list-style-position: outside;
+}
+.icon-list > li > p{
+  margin-left: 1rem;
+}
 /* input#tag {
   background-image: url("/images/tags.png");
   background-size:contain;

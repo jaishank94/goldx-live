@@ -76,7 +76,7 @@ const index = () => {
       <Header displayCreate={true} handleSidebar={handleSidebar} />
       <div className="wrapper custom-wrapper overflow-hidden bg-[#f4eddfd1] dark:bg-neutral-900">
         <div className="max-w-screen-xl mx-2 md:mx-auto">
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
             <div className="relative lg:col-span-3 p-4 rounded-2xl bg-[url('/images/homePgGoldBarWCoins.png')] bg-cover object-fill pt-72">
               <div className="rounded-xl bg-black bg-opacity-75 backdrop-blur-md border border-slate-800 p-4">
                 <div className="flex justify-between items-center text-xs border-b border-slate-800 pb-3 mb-3">
