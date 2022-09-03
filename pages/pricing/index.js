@@ -76,7 +76,7 @@ const Pricing = () => {
                 </div>
                 <div class="p-4 text-center bg-gradient-to-r from-gold-300 to-gold-100">
                   <p className='text-4xl leading-normal font-logo-font font-bold text-white'>$79<span className='text-gold-100 text-lg'>/mo</span></p>
-                  <span className='text-sm'>No subscription required</span>
+                  <span className='text-sm'>Billed annually or <span className='font-medium'>$95/mo</span></span>
                 </div>
                 <div class="p-10 leading-8">
                   <ul>
@@ -125,7 +125,7 @@ const Pricing = () => {
                 </div>
                 <div class="p-4 text-center dark:from-neutral-800 dark:to-neutral-800 bg-gradient-to-r from-gold-200/30 to-gold-100/20">
                   <p className='text-4xl leading-normal text-transparent font-logo-font font-bold bg-clip-text bg-gradient-to-r from-gold-300 to-[#f4eddfd1]'>$299<span className='text-gold-100 text-lg'>/mo</span></p>
-                  <span className='text-sm'>No subscription required</span>
+                  <span className='text-sm'>Billed annually or <span className='font-medium'>$375/mo</span></span>
                 </div>
                 <div class="p-10 leading-8">
                   <ul>
