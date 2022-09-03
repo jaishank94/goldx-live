@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { BsTwitter, BsGithub, BsFillInfoCircleFill } from "react-icons/bs";
 
 export default function Sidebar({ isOpen }) {
   const router = useRouter();
@@ -18,6 +17,7 @@ export default function Sidebar({ isOpen }) {
             ['Gold News', '/gold-news'],
             ['Blogs', '/blogs'],
             ['Advertise', '/advertise'],
+            ['Pricing', '/pricing'],
           ].map(([title, url]) => (
             <li><a href={url} className="flex items-center cursor-pointer p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 uppercase">{title}</a></li>
           ))}

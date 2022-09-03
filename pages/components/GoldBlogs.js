@@ -5,24 +5,24 @@ const GoldBlogs = () => {
       <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
         <div className="relative lg:col-span-3 ">
           <img src="/images/gold-bars-and-coins.png" />
-          <div className='bg-[#f5f1ea] p-6 shadow-lg rounded-b-2xl'>
+          <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg rounded-b-2xl'>
             <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
             <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
             <p className="text-xs mt-6">August 18, 2022</p>
           </div>
         </div>
         <div className='lg:col-span-2'>
-          <div className='bg-[#f5f1ea] p-6 shadow-lg rounded-2xl border border-slate-200 mb-6'>
+          <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg rounded-2xl border border-slate-200 mb-6'>
             <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
             <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
             <p className="text-xs mt-6">August 18, 2022</p>
           </div>
-          <div className='bg-[#f5f1ea] p-6 shadow-lg rounded-2xl border border-slate-200 mb-6'>
+          <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg rounded-2xl border border-slate-200 mb-6'>
             <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
             <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
             <p className="text-xs mt-6">August 18, 2022</p>
           </div>
-          <div className='bg-[#f5f1ea] p-6 shadow-lg rounded-2xl border border-slate-200 mb-6'>
+          <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg rounded-2xl border border-slate-200 mb-6'>
             <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
             <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
             <p className="text-xs mt-6">August 18, 2022</p>
@@ -33,7 +33,7 @@ const GoldBlogs = () => {
         <div className="relative lg:col-span-3 ">
           <div className='flex items-center justify-center mb-6'>
             <img src="/images/gold-bar-list-w-image.png" />
-            <div className='bg-[#f5f1ea] p-6 shadow-lg border border-slate-200 rounded-r-2xl'>
+            <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg border border-slate-200 rounded-r-2xl'>
               <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
               <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
               <p className="text-xs mt-6">August 18, 2022</p>
@@ -41,7 +41,7 @@ const GoldBlogs = () => {
           </div>
           <div className='flex items-center justify-center mb-6'>
             <img src="/images/gold-bar-list-w-image.png" />
-            <div className='bg-[#f5f1ea] p-6 shadow-lg border border-slate-200 rounded-r-2xl'>
+            <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg border border-slate-200 rounded-r-2xl'>
               <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
               <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
               <p className="text-xs mt-6">August 18, 2022</p>
@@ -49,7 +49,7 @@ const GoldBlogs = () => {
           </div>
           <div className='flex items-center justify-center'>
             <img src="/images/gold-bar-list-w-image.png" />
-            <div className='bg-[#f5f1ea] p-6 shadow-lg border border-slate-200 rounded-r-2xl'>
+            <div className='bg-[#f5f1ea] dark:bg-neutral-900 dark:border-neutral-700 p-6 shadow-lg border border-slate-200 rounded-r-2xl'>
               <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
               <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
               <p className="text-xs mt-6">August 18, 2022</p>
@@ -57,7 +57,7 @@ const GoldBlogs = () => {
           </div>
         </div>
         <div className='lg:col-span-2'>
-          <div className="max-w-2xl mx-auto border border-slate-300 uppercase w-full h-full flex items-center justify-center">
+          <div className="max-w-2xl mx-auto border border-slate-300 dark:border-neutral-700 uppercase w-full h-full flex items-center justify-center">
             ** Google Ads **
           </div>
         </div>

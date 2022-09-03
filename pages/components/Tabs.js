@@ -18,12 +18,12 @@ const Tabs = ({ color }) => {
                 ['financial', 3]
               ].map(([name, tabId]) => (
                 <li className={`-mb-px mr-2 last:mr-0 rounded-full overflow-hidden p-[2px] flex-auto text-center ${openTab === tabId && 'bg-gradient-to-r from-[#a8773f] to-gold-100/50'}`}>
-                  <p className={`rounded-full bg-[#f6f0e5] ${openTab === tabId && 'bg-white'}`}>
+                  <p className={`rounded-full bg-[#f6f0e5] dark:bg-neutral-900`}>
                     <a
                       className={
                         "uppercase px-5 py-3 rounded-full block leading-normal " +
                         (openTab === tabId
-                          ? " font-bold text-transparent uppercase font-bold bg-clip-text bg-gradient-to-r from-[#a8773f] to-[#f4eddfd1]/50"
+                          ? "text-transparent uppercase font-bold bg-clip-text bg-gradient-to-r from-[#a8773f] to-[#f4eddfd1]/50"
                           : "font-medium")
                       }
                       onClick={e => {

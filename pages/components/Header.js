@@ -71,6 +71,7 @@ const Header = ({ displayCreate }) => {
               ['Gold News', '/gold-news'],
               ['Blogs', '/blogs'],
               ['Advertise', '/advertise'],
+              ['Pricing', '/pricing'],
             ].map(([title, url]) => (
               <a href={url} className="px-3 py-2 sm:text-xs md:text-sm uppercase">{title}</a>
             ))}
