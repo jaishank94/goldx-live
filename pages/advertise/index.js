@@ -11,7 +11,7 @@ const Advertise = () => {
   const { theme, setTheme } = useTheme("light");
 
   useEffect(() => {
-    setTheme('light')
+    // setTheme('light')
   }, [])
 
   const handleSidebar = () => {
@@ -43,12 +43,12 @@ const Advertise = () => {
             </div>
           </div>
           <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
-            <div className="lg:col-span-3 pr-10 mt-28">
+            <div className="lg:col-span-3 pr-10 mt-28 pl-10 order-last lg:order-first">
               <img src="/images/crypto-coin.png" />
               <p className="text-3xl md:text-4xl font-bold font-logo-font my-8">Accept Gold X Token</p>
               <p className="text-sm text-slate-600 dark:text-white/70 mb-8">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>
-            <div className="relative lg:col-span-2">
+            <div className="relative lg:col-span-2 order-first lg:order-last">
               <img src="/images/gold-bar-cut.png" className="block" />
             </div>
           </div>
@@ -63,6 +63,9 @@ const Advertise = () => {
             </div>
           </div>
         </div>
+        <div className="max-w-6xl mx-auto border border-slate-300 uppercase w-full my-20 h-24 flex items-center justify-center">
+            ** Google Ads **
+          </div>
         <Footer />
       </div>
     </Fragment>

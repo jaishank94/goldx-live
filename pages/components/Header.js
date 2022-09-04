@@ -34,7 +34,7 @@ const Header = ({ displayCreate }) => {
 
   const web3Account = useMemo(
     () => isAuthenticated && user.get("accounts")[0],
-    [user, isAuthenticated],
+    [user, isAuthenticated]
   );
 
   const handleSidebar = () => {
@@ -50,14 +50,24 @@ const Header = ({ displayCreate }) => {
         <Head>
           <title>gold.live</title>
           <link rel="icon" href="/favicon.png" />
-          <link href="https://fonts.cdnfonts.com/css/samsung-sharp-sans" rel="stylesheet" />
-          <link href="https://fonts.cdnfonts.com/css/gordita" rel="stylesheet" />
-
+          <link
+            href="https://fonts.cdnfonts.com/css/samsung-sharp-sans"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.cdnfonts.com/css/gordita"
+            rel="stylesheet"
+          />
         </Head>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 xl:max-w-7xl xl:px-0 ">
           <Link className="" href="/">
             <div className="flex items-center cursor-pointer">
-              <img src="/images/gold-live-logo.png" width={50} height={50} className="stroke-slate-500" />
+              <img
+                src="/images/gold-live-logo.png"
+                width={50}
+                height={50}
+                className="stroke-slate-500"
+              />
               <p className="font-bold md:text-3xl text-xl ml-1 font-logo-font outline-4 text-stroke hidden lg:block">
                 <span className="text-gold-200">gold.</span>
                 <span className="text-gold-100/60">live</span>
@@ -66,21 +76,36 @@ const Header = ({ displayCreate }) => {
           </Link>
           <nav className="flex items-start sm:justify-center space-x-4 lg:block hidden">
             {[
-              ['Valuation', '/valuation'],
-              ['Strategic Asset', '/strategic-asset'],
-              ['Gold News', '/gold-news'],
-              ['Blogs', '/blogs'],
-              ['Advertise', '/advertise'],
-              ['Pricing', '/pricing'],
+              ["Valuation", "/valuation"],
+              ["Strategic Asset", "/strategic-asset"],
+              ["Gold News", "/gold-news"],
+              ["Blogs", "/blogs"],
+              ["Advertise", "/advertise"],
+              ["Pricing", "/pricing"],
             ].map(([title, url]) => (
-              <a href={url} className="px-3 py-2 sm:text-xs md:text-sm uppercase">{title}</a>
+              <Link href={url}>
+                <span className="px-3 py-2 sm:text-xs md:text-sm uppercase cursor-pointer">
+                  {title}
+                </span>
+              </Link>
             ))}
           </nav>
           <div className="flex items-center space-x-5">
-            <button className={`rounded-full border border-slate-200 dark:border-neutral-600 p-2 "
-              } cursor-pointer md:rounded-full`}>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+            <button
+              className={`rounded-full border border-slate-200 dark:border-neutral-600 p-2 "
+              } cursor-pointer md:rounded-full`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                  clip-rule="evenodd"
+                />
               </svg>
               {/* search icon */}
             </button>
@@ -111,6 +136,6 @@ const Header = ({ displayCreate }) => {
       <Sidebar isOpen={isOpen} />
     </>
   );
-}
+};
 
-export default Header
+export default Header;

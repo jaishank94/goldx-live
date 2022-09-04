@@ -4,6 +4,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import { BsTwitter, BsGithub } from "react-icons/bs";
 import GoldBarsImg from "../../public/images/gold-bars.png"
+import Link from "next/link";
 
 const Footer = () => {
   const router = useRouter();
@@ -52,9 +53,13 @@ const Footer = () => {
               ['Blogs', '/blogs'],
               ['Advertise', '/advertise'],
               ['Privacy Policy', '/privacy'],
-              ['Terms & Conditions', '/tnc'],
+              // ['Terms & Conditions', '/tnc'],
             ].map(([title, url]) => (
-              <li><a href={url} className="mr-4 hover:underline md:mr-6">{title}</a></li>
+              <Link href={url}>
+                <span className="mr-4 hover:underline md:mr-6 cursor-pointer">
+                  {title}
+                </span>
+              </Link>
             ))}
           </ul>
         </div>

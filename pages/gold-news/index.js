@@ -9,7 +9,7 @@ const GoldNews = () => {
   const { theme, setTheme } = useTheme("light");
 
   useEffect(() => {
-    setTheme('light')
+    // setTheme('light')
   }, [])
 
   const handleSidebar = () => {
