@@ -37,7 +37,7 @@ const GoldNews = () => {
                   <div className="relative lg:col-span-2 rounded-2xl overflow-hidden" key={key+1}>
                     <div className="bg-[url('/images/gold-bar-product.png')] bg-cover object-fill h-64">
                     </div>
-                    <div className="p-6 bg-gradient-to-b from-[#c8bda8] to-[#f2e9dddb]">
+                    <div className="p-6 dark:from-black bg-gradient-to-b from-[#c8bda8] to-[#f2e9dddb] ">
                       <p className="text-xl font-bold font-logo-font font-medium mb-4">Gold amid higher inflation...</p>
                       <p className="text-sm">Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperi... <span className="font-medium">MORE</span></p>
                       <p className="text-xs mt-6">August 18, 2022</p>
