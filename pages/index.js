@@ -110,8 +110,8 @@ const index = () => {
                     <p className="flex text-base font-medium text-inherit">Spot price: $1,770.05 <span className="flex text-green-600 text-base"><GoArrowUp /> +8.55 <span>(+0.49%)</span></span></p>
                   </div>
                   <button className="cursor-pointer border p-1 text-sm bg-gray-400 rounded-full m-1 border-slate-200 dark:border-neutral-300 hover:border-slate-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                   </button>
                 </div>
@@ -130,8 +130,8 @@ const index = () => {
                     <p className="flex text-base font-medium text-inherit">Spot price: $1,770.05 <span className="flex text-green-600 text-base"><GoArrowUp /> +8.55 <span>(+0.49%)</span></span></p>
                   </div>
                   <button className="cursor-pointer border p-1 text-sm bg-gray-400 rounded-full m-1 border-slate-200 dark:border-neutral-300 hover:border-slate-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                   </button>
                 </div>

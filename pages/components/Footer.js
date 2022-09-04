@@ -20,7 +20,7 @@ const Footer = () => {
     <Fragment>
       <footer
         className='text-center relative bottom-0 w-full pt-48 mt-48 bg-white dark:bg-neutral-800'>
-        <div className=" max-w-7xl absolute -top-36 left-0 right-0 rounded-3xl md:mx-auto bg-[url('/images/footer-image.jpg')] bg-cover object-fill p-10">
+        <div className="max-w-7xl mx-2 absolute -top-36 left-0 right-0 rounded-3xl lg:mx-auto bg-[url('/images/footer-image.jpg')] bg-cover object-fill p-10">
           <div className="flex justify-between">
             <div className="md:w-1/2 text-left">
               <p className="text-3xl md:text-6xl text-white font-bold">
@@ -54,8 +54,8 @@ const Footer = () => {
               ['Advertise', '/advertise'],
               ['Privacy Policy', '/privacy'],
               // ['Terms & Conditions', '/tnc'],
-            ].map(([title, url]) => (
-              <Link href={url}>
+            ].map(([title, url], k) => (
+              <Link href={url} key={k}>
                 <span className="mr-4 hover:underline md:mr-6 cursor-pointer">
                   {title}
                 </span>

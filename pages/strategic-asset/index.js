@@ -26,7 +26,7 @@ const StrategicAsset = () => {
             </div>
             <p className="mt-6 font-normal text-sm text-slate-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem toto celobeso.</p>
           </div>
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
             <div className="lg:col-span-2">
               <div className="w-[384px] h-[384px] md:w-[500px] md:h-[500px] p-6 rounded-full border border-gold-100 flex align-center justify-center">
                 <div className="bg-[url('/images/round-bar-and-coins-blur.png')] bg-cover object-fill m-auto w-[335px] h-[335px] md:w-[429px] md:h-[429px] flex align-center justify-center">
@@ -46,7 +46,7 @@ const StrategicAsset = () => {
           <div className="max-w-6xl mx-auto border border-slate-300 uppercase w-full my-20 h-24 flex items-center justify-center">
             ** Google Ads **
           </div>
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
             <div className="lg:col-span-3 flex mr-10">
               <div className="my-auto">
                 <p className="text-gold-200 font-medium text-2xl">Investment update</p>
@@ -63,7 +63,7 @@ const StrategicAsset = () => {
               </div>
             </div>
           </div>
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5 my-10">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5 my-10">
             <div className="relative lg:col-span-2 p-6 rounded-3xl bg-[url('/images/gold-leaf-bg-black.png')] bg-cover object-fill">
               <div className="mt-72">
                 <p className="text-2xl text-white font-bold">

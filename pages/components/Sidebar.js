@@ -18,8 +18,8 @@ export default function Sidebar({ isOpen }) {
             ['Blogs', '/blogs'],
             ['Advertise', '/advertise'],
             ['Pricing', '/pricing'],
-          ].map(([title, url]) => (
-            <li><a href={url} className="flex items-center cursor-pointer p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 uppercase">{title}</a></li>
+          ].map(([title, url], k) => (
+            <li key={k} ><a href={url} className="flex items-center cursor-pointer p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 uppercase">{title}</a></li>
           ))}
         </ul>
       </div>

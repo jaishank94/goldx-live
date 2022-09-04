@@ -30,7 +30,7 @@ const GoldNews = () => {
             </div>
             <p className="mt-6 font-normal text-sm text-slate-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem toto celobeso.</p>
           </div>
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-6 gap-y-14 lg:max-w-none lg:grid-cols-6 ">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-6 gap-y-14 lg:max-w-none lg:grid-cols-6 ">
             {
               [1, 2, 3, 4, 5, 6].map((list, key) => {
                 return (

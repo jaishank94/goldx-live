@@ -30,7 +30,7 @@ const valuation = () => {
             </div>
             <p className="mt-6 font-normal text-sm text-slate-600">Sed ut perspiciatis unde omnis iste natus error sit voluptatem toto celobeso.</p>
           </div>
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-5">
             <div className="relative lg:col-span-3 p-6 rounded-2xl bgImg3-with-gradient bg-cover object-fill">
               <p className="text-align:start  text-white">August 18, 2022</p>
               <div className="mt-20 w-2/3">
@@ -53,7 +53,7 @@ const valuation = () => {
             ** Google Ads **
           </div>
           <Image src={GoldMarketChart} layout={'responsive'} />
-          <div class="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-7 mt-10">
+          <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-6 lg:max-w-none lg:grid-cols-7 mt-10">
             <div className="relative lg:col-span-5 rounded-2xl">
               <Image src={GoldPriceTodayChart} layout={'responsive'} />
             </div>
